@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 90%;
+    font-family: Arial, sans-serif;
+    background: url('./assets/pexels-pixabay-66869.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border: 5px solid #000;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 90%; /* Ajusta la altura para evitar el scroll */
+    max-height: 600px; /* Máxima altura para el contenedor */
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+    flex-shrink: 0;
+}
+
+canvas {
+    display: block;
+    background-color: #fff;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    max-height: 450px;
+}
