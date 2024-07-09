@@ -11,6 +11,7 @@ let snake;
 let direction;
 let food;
 let game;
+let speed = 200; // Inicial velocidad del juego
 
 // Inicializar el juego
 function initGame() {
@@ -26,7 +27,8 @@ function initGame() {
         y: Math.floor(Math.random() * (canvas.height / box)) * box
     };
 
-    game = setInterval(draw, 100);
+    clearInterval(game);
+    game = setInterval(draw, speed);
 }
 
 // Carga de imágenes
@@ -49,6 +51,7 @@ function setDirection(event) {
         direction = "DOWN";
     } else if (event.keyCode === 32) { // Barra espaciadora para reiniciar
         clearInterval(game);
+        speed = 200; // Reiniciar la velocidad
         initGame();
     }
 }
@@ -83,6 +86,10 @@ function draw() {
             x: Math.floor(Math.random() * (canvas.width / box)) * box,
             y: Math.floor(Math.random() * (canvas.height / box)) * box
         };
+        // Aumentar la velocidad
+        speed = Math.max(50, speed - 10); // No disminuir la velocidad a menos de 50 ms
+        clearInterval(game);
+        game = setInterval(draw, speed);
     } else {
         snake.pop();
     }

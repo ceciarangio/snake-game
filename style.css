@@ -22,8 +22,8 @@ body, html {
     border: 5px solid #000;
     border-radius: 10px;
     box-sizing: border-box;
-    height: 90%; /* Ajusta la altura para evitar el scroll */
-    max-height: 600px; /* Máxima altura para el contenedor */
+    height: 90%; 
+    max-height: 600px; 
 }
 
 h1 {
